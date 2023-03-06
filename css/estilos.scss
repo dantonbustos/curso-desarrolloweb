@@ -7,7 +7,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1201px) {
   .categoria_grilla {
     display: grid;
     grid-template-areas: "menu_categorias ofertas ofertas";
@@ -22,7 +22,7 @@ body {
   }
 
   .main {
-    margin: 20px 200px;
+    margin: 30px 200px;
   }
 
   .oferta {
@@ -100,9 +100,70 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
+
+  header .logo img {
+    width: 80%;
+  }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 1000px) and (max-width: 1200px){
+  .main {
+    margin: 20px 100px;
+  }
+  .navbar {
+    display: none;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+  header .logo img {
+    width: 100%;
+  }
+  .contenedor_categorias {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .contenedor_ofertas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .detalle_carro {
+    display: grid;
+    grid-template-columns: 150px 2fr 50px;
+    gap: 30px;
+    padding: 20px 0;
+  }
+  .foto_producto_carro {
+    border: 2px #d9d9d9 solid;
+    padding: 15px;
+  }
+  .foto_producto_carro img {
+    height: auto;
+    max-width: 100%;
+  }
+  .contenedor_categoria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 15px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px 0;
+  }
+  .oferta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media (min-width: 300px) and (max-width: 999px) {
   .footer .menu,
   .footer .pago {
     display: none;
@@ -195,6 +256,15 @@ body {
     grid-template-columns: 1fr 2fr;
     gap: 15px;
   }
+ 
+  header .logo img {
+    width: 80%;
+  }
+  
+}
+
+.carrusel {
+  position: relative;
 }
 
 .marcas div {
@@ -219,7 +289,6 @@ header .menu ul {
   gap: 20px;
   list-style-type: none;
   flex-direction: row;
-  margin-top: 20px;
 }
 
 .wp,
@@ -241,8 +310,7 @@ header .menu {
 }
 
 .ml img,
-.wp img,
-header .logo img {
+.wp img {
   width: 80%;
 }
 
@@ -276,6 +344,19 @@ li a,
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  filter: brightness(30%);
+}
+
+.texto_carrusel {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding-right: 50px;
+  left: 0;
+  padding: 30px;
 }
 
 .caja_categoria {
@@ -366,7 +447,6 @@ li a,
   font-weight: 900;
   font-size: 12px;
   font-style: normal;
-  line-height: 29px;
   text-transform: uppercase;
   margin: 15px 0;
   text-align: center;
