@@ -95,6 +95,11 @@ body {
     min-height: 60px;
   }
 
+  .cantidad_carro {
+    grid-area: cantidad_carro;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 }
 
 @media (max-width: 900px) {
@@ -182,6 +187,12 @@ body {
 
   .texto_producto_categoria {
     min-height: 100px;
+  }
+
+  .cantidad_carro {
+    grid-area: cantidad_carro;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -515,13 +526,12 @@ li a,
   grid-area: precio;
 }
 
-.cantidad_carro {
-  grid-area: cantidad_carro;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
 .boton_quitar {
   align-items: center;
   display: flex;
+}
+
+.cantidad {
+  display: flex;
+  align-self: center;
 }
