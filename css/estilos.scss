@@ -193,6 +193,7 @@ body {
     grid-area: cantidad_carro;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    gap: 15px;
   }
 }
 
@@ -441,6 +442,8 @@ li a,
 
 .menu_categoria {
   grid-area: menu_categorias;
+  padding: 20px 0;
+  width: 85%;
 }
 
 .ofertas {
@@ -461,11 +464,6 @@ li a,
 
 .marcas {
   grid-area: marcas;
-}
-
-.padding {
-  padding: 20px 0;
-  width: 85%;
 }
 
 .list-group {
