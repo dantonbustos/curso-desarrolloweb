@@ -1,3 +1,8 @@
+/* APLICA ELEMENTOS PARTIALS SASS */
+@import "mobile";
+@import "tablet";
+@import "desktop";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,262 +10,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-}
-
-@media (min-width: 1201px) {
-  .categoria_grilla {
-    display: grid;
-    grid-template-areas: "menu_categorias ofertas ofertas";
-  }
-
-  .contenedor_categorias,
-  .contenedor_ofertas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    place-items: center;
-    gap: 30px;
-  }
-
-  .main {
-    margin: 30px 200px;
-  }
-
-  .oferta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-  }
-
-  .footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 40px 0;
-  }
-
-  .navbar {
-    display: none;
-  }
-
-  .header {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-  }
-
-  .contenedor_categoria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    gap: 15px;
-  }
-
-  .detalle {
-    display: grid;
-    grid-template-areas:
-      "foto_producto titulo"
-      "foto_producto descripcion"
-      "foto_producto precio"
-      "foto_producto cantidad_carro";
-    gap: 30px;
-    padding: 10px 0;
-  }
-
-  .detalle_carro {
-    display: grid;
-    grid-template-columns: 150px 2fr 50px;
-    gap: 30px;
-    padding: 20px 0;
-  }
-
-  .foto_producto_carro {
-    border: 2px #d9d9d9 solid;
-    padding: 15px;
-  }
-
-  .foto_producto_carro img {
-    height: auto;
-    max-width: 100%;
-  }
-
-  .finalizar_compra {
-    width: 300px;
-    margin-left: auto;
-  }
-
-  .texto_producto {
-    min-height: 60px;
-  }
-
-  .texto_producto_categoria {
-    min-height: 60px;
-  }
-
-  .cantidad_carro {
-    grid-area: cantidad_carro;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-
-  header .logo img {
-    width: 80%;
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1200px){
-  .main {
-    margin: 20px 100px;
-  }
-  .navbar {
-    display: none;
-  }
-  .header {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-  }
-  header .logo img {
-    width: 100%;
-  }
-  .contenedor_categorias {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-  }
-  .contenedor_ofertas {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .detalle_carro {
-    display: grid;
-    grid-template-columns: 150px 2fr 50px;
-    gap: 30px;
-    padding: 20px 0;
-  }
-  .foto_producto_carro {
-    border: 2px #d9d9d9 solid;
-    padding: 15px;
-  }
-  .foto_producto_carro img {
-    height: auto;
-    max-width: 100%;
-  }
-  .contenedor_categoria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    gap: 15px;
-  }
-  .footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 40px 0;
-  }
-  .oferta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-}
-
-@media (min-width: 300px) and (max-width: 999px) {
-  .footer .menu,
-  .footer .pago {
-    display: none;
-  }
-
-  .contenedor_categorias {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-  }
-
-  .main {
-    margin: 20px 40px;
-  }
-
-  .contenedor_ofertas {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .marcas {
-    display: none;
-  }
-
-  .oferta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 40px 0;
-  }
-
-  .header .menu,
-  .header .sesion {
-    display: none;
-  }
-
-  .header {
-    display: grid;
-    grid-template-columns: 2fr auto;
-  }
-
-  .breadcrumbs {
-    display: none;
-  }
-
-  .contenedor_categoria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    gap: 15px;
-  }
-
-  .detalle {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .detalle_carro {
-    display: grid;
-    grid-template-columns: 100px 1.5fr 20px;
-    gap: 30px;
-    padding: 20px 0;
-  }
-
-  .foto_producto_carro {
-    border: 2px #d9d9d9 solid;
-    position: relative;
-  }
-
-  .foto_producto_carro img {
-    height: auto;
-    max-width: 100%;
-    position: absolute;
-    top: 20%;
-  }
-
-  .texto_producto_categoria {
-    min-height: 100px;
-  }
-
-  .cantidad_carro {
-    grid-area: cantidad_carro;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 15px;
-  }
- 
-  header .logo img {
-    width: 80%;
-  }
-  
 }
 
 .carrusel {
@@ -293,12 +42,41 @@ header .menu ul {
 
 .wp,
 .ml,
-footer .logo,
-footer .menu,
 header .menu {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* APLICA ELEMENTOS ANIDADOS SASS */
+footer {
+  .logo,
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.texto_carrusel {
+  h1 {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding-right: 50px;
+  left: 0;
+  padding: 30px;
+  text-align: center;
+}
+}
+
+.ml ,.wp{
+  img {
+    width: 80%;
+  }
 }
 
 .rrss {
@@ -309,10 +87,7 @@ header .menu {
   flex-direction: row;
 }
 
-.ml img,
-.wp img {
-  width: 80%;
-}
+
 
 .marcas div {
   display: flex;
@@ -345,18 +120,6 @@ li a,
   background-size: cover;
   position: relative;
   filter: brightness(30%);
-}
-
-.texto_carrusel {
-  position: absolute;
-  bottom: 0;
-  color: #fff;
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: bolder;
-  padding-right: 50px;
-  left: 0;
-  padding: 30px;
 }
 
 .caja_categoria {
@@ -424,8 +187,8 @@ li a,
   width: 100%;
 }
 
-.texto_seccion span,
-.detalle .titulo span {
+.texto_seccion span h4,
+.detalle .titulo span h5 {
   font-weight: 900;
   font-size: 20px;
   font-style: normal;
